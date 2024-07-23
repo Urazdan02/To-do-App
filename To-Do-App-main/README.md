@@ -3,8 +3,6 @@
 
 It is a simple To Do App written in C# language with ASP NET framework in MVC design pattern.
 
-<a class="" href="">LIVE Website (Not implemented yet)</a>
-
 In order use our site u have to create account for yourself by clicking "Register" in top-right corner of the web.
 
 After registration you need to log in in similar way as you have registered.
@@ -27,8 +25,4 @@ Clicking at "Details" will show you details about your task.
 Delete button will firstly ask you if you really want to delete selected task and if so it will remove it from database.
 
 <br>
-
-
-<br>
-
 
