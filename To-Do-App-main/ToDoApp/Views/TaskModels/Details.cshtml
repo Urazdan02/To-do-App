@@ -1,0 +1,56 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+
+@model ToDoApp.Models.TaskModel
+
+@{
+    ViewData["Title"] = @Localizer["DetailsTitle"];
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>@Localizer["Task"]</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insert_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insert_Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Task_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Task_Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Completed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Completed)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">@Localizer["EditTask"]</a> |
+    <a asp-action="Index">@Localizer["GoBack"]</a>
+</div>

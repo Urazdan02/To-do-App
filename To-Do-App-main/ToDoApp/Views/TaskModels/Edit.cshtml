@@ -1,0 +1,66 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+
+@model ToDoApp.Models.TaskModel
+
+@{
+    ViewData["Title"] = Localizer["EditTitle"];
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>@Localizer["Task"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label">@Localizer["Title"]</label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label">@Localizer["Content"]</label>
+                <input asp-for="Content" class="form-control" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Insert_Date" class="control-label">@Localizer["Date"]</label>
+                <input asp-for="Insert_Date" class="form-control" readonly="readonly" />
+                <span asp-validation-for="Insert_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Task_Date" class="control-label">@Localizer["EndDate"]</label>
+                <input asp-for="Task_Date" class="form-control" />
+                <span asp-validation-for="Task_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label">@Localizer["Localization"]</label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Completed" /> @Html.DisplayNameFor(model => model.Completed)
+                </label>
+            </div>
+            <div class="form-group">
+                <input asp-for="UserID" class="form-control" type="hidden" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">@Localizer["GoBack"]</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

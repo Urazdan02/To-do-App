@@ -1,0 +1,15 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<h3>Dupalog</h3>
+<p>
+   Coś się wykrzaczyło :(
+</p>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}

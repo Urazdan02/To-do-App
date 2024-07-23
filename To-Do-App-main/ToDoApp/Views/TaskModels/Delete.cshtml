@@ -1,0 +1,59 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+
+@model ToDoApp.Models.TaskModel
+
+@{
+    ViewData["Title"] = Localizer["DeleteTitle"];
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>@Localizer["Confirmation"]</h3>
+<div>
+    <h4>Zadanie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insert_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insert_Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Task_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Task_Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Completed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Completed)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">@Localizer["GoBack"]</a>
+    </form>
+</div>
