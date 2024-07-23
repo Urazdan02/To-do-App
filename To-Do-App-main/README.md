@@ -83,28 +83,6 @@ Delete button will firstly ask you if you really want to delete selected task an
 
 <br>
 
-## About Us
-
-We are students at University of Silesia in Poland. Check out our other projects on our github pages!
-
-<table align="center">
-  <tr>
-    <th>
-      <a href="https://github.com/xFeew">
-      <img src="https://avatars.githubusercontent.com/u/56722498?v=4" alt="xFeew's Avatar" style="width:100px;height:100px;"> 
-      </a> 
-    </th>
-    <th>
-      <a href="https://github.com/Equelister">
-        <img src="https://avatars.githubusercontent.com/u/54372462?v=4" alt="Equelister's Avatar" style="width:100px;height:100px;"> 
-      </a>
-    </th>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/xFeew">xFeew</a> </td>
-    <td align="center"><a href="https://github.com/Equelister">Equelister</a></td>
-  </tr>
-</table> 
 
 <br>
 
